@@ -1,0 +1,359 @@
+Gui:
+  land:
+    inventory_name: 'Land List [Pg: %page%]'
+    inventory_rows: 5
+    sound-open: ''
+    max_items: 36
+    items:
+      current:
+        sound-click: '' #example BLOCK_ANVIL_LAND:1
+        itemstack: 'GRASS'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 0
+        name: '&aGround n. %number%'
+        lore:
+        - ''
+        - ' &eClick to edit preferences.'
+        - ' '
+        - ' &ePosition&b: %chunk%'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[opengui] info_land:%chunk%'
+        right-action:
+        - '[closegui]'
+        - '[opengui] info_land:%chunk%'
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&cPrevious page'
+        lore:
+        - ''
+        - ' &eClick to go back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_land] %prev%'
+        right-action:
+        - '[opengui_land] %prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&cNext page'
+        lore:
+        - ''
+        - ' &eClick to proceed.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_land] %next%'
+        right-action:
+        - '[opengui_land] %next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to go back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_land'
+        right-action:
+        - '[opengui] index_land'
+  members:
+    inventory_name: 'List of Members "%land%" [Pg: %page%]'
+    inventory_rows: 5
+    sound-open: ''
+    max_items: 27
+    items:
+      current:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: '%player%'
+        texture: ''
+        data: 3
+        amount: 1
+        slot: 0
+        name: '&a%player%'
+        lore:
+        - ''
+        - ' &cUse LEFT CLICK to Remove'
+        - ' &cUse RIGHT CLICK to Ban'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land removemember %player% %land%'
+        - '[opengui_members] %land%:1'
+        right-action:
+        - '[closegui]'
+        - '[player] land ban %player% %land%'
+        - '[opengui_members] %land%:1'
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&aPrevious page'
+        lore:
+        - ''
+        - ' &eClick to Come back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_members] %land%:%prev%'
+        right-action:
+        - '[opengui_members] %land%:%prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&aNext page'
+        lore:
+        - ''
+        - ' &eClick to proceed.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_members] %land%:%next%'
+        right-action:
+        - '[opengui_members] %land%:%next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to Come back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] info_land:%land%'
+        right-action:
+        - '[opengui] info_land:%land%'
+  banned_members:
+    inventory_name: 'Banned Members "%land%" [Pg: %page%]'
+    inventory_rows: 5
+    sound-open: ''
+    max_items: 27
+    items:
+      current:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: '%player%'
+        texture: ''
+        data: 3
+        amount: 1
+        slot: 0
+        name: '&a%player%'
+        lore:
+        - ''
+        - ' &cUse RIGHT CLICK to Unban'
+        enchants:
+        - ''
+        flags:
+        - ''
+        right-action:
+        - '[closegui]'
+        - '[player] land unban %player% %land%'
+        - '[opengui_bannedmembers] %land%:1'
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&aPrevious page'
+        lore:
+        - ''
+        - ' &eClick to Come back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_bannedmembers] %land%:%prev%'
+        right-action:
+        - '[opengui_bannedmembers] %land%:%prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&aNext page'
+        lore:
+        - ''
+        - ' &eClick to proceed.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_bannedmembers] %land%:%next%'
+        right-action:
+        - '[opengui_bannedmembers] %land%:%next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to Come back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] info_land:%land%'
+        right-action:
+        - '[opengui] info_land:%land%'
+  online_members:
+    inventory_name: 'Online in the land "%land%" [Pg: %page%] '
+    inventory_rows: 5
+    sound-open: ''
+    max_items: 27
+    items:
+      current:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: '%player%'
+        texture: ''
+        data: 3
+        amount: 1
+        slot: 0
+        name: '&a%player%'
+        lore:
+        - ''
+        - ' &cUse LEFT CLICK to Remove'
+        - ' &cUse RIGHT CLICK to Ban'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land removemember %player% %land%'
+        - '[opengui_online] %land%:1'
+        right-action:
+        - '[closegui]'
+        - '[player] land ban %player% %land%'
+        - '[opengui_online] %land%:1'
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&aPrevious page'
+        lore:
+        - ''
+        - ' &eClick to Come back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_bannedmembers] %land%:%prev%'
+        right-action:
+        - '[opengui_bannedmembers] %land%:%prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&aNext page'
+        lore:
+        - ''
+        - ' &eClick to proceed.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_bannedmembers] %land%:%next%'
+        right-action:
+        - '[opengui_bannedmembers] %land%:%next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to Come back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] info_land:%land%'
+        right-action:
+        - '[opengui] info_land:%land%'
