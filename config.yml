@@ -15,6 +15,8 @@ Config:
   enabled_worlds:
   - lobby
   - world
+  disabled_regions: #To add regions take the stick using /uclan wand, select the points that surround the entire desired location and use /uclan addregion <name>.
+  - lobby
   use_material_claim: true
   use_material_claim_all: false
   material_claim: TORCH
