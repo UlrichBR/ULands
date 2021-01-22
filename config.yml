@@ -6,9 +6,9 @@ Local:
 Config:
   date-format: dd/MM/yyyy HH:mm
   enabled: true
-  clan_bases: true #When connected, The owner of the land is the TAG of the clan, and all members have access to the land
+  clan_bases: false #When connected, The owner of the land is the TAG of the clan, and all members have access to the land
   delete_extensions_on_unclaim: true #When connected, when deleting a land it removes the chunks together
-  only_edit_claimed: true #Can the player edit only lands he has protected?
+  only_edit_claimed: false #Can the player edit only lands he has protected?
   chunks_start_clan: 4 #With the option for clans the amount per player is this
   chunks_max_clan: 10 #Maximum chunks that the clan can create, regardless of the number of members
   chunk_limit_default: 1
@@ -139,7 +139,7 @@ Prices:
     show: 1000.0
 Rtp:
   enabled: true
-  toworld: LESSPLAYERS
+  toworld: FIRST #values: RANDON, FIRST, LESSPLAYERS, MOREPLAYERS
   use_delay: 120
   rangemax: 2500
   rangemin: -2500
@@ -226,6 +226,26 @@ Commands:
             click_action: /uland setkickspawn
           on_success: '%tag% &eLocation for kicked players set to your location'
           on_error: '%tag% &cUse &4/uland setkickspawn'
+          raw_base_color: DARK_RED
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      rtp:
+        permission: ulands.admin.rtp
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: random
+        show:
+          on_help: ' &4/uland rtp <player> &7-&e Send the player to a random location.'
+          on_help_json:
+            hover_text: '&aClick to send the player to a random location.'
+            click_type: SUGGEST_COMMAND
+            click_action: /uland rtp <player>
+          on_success: '%tag% &ePlayer sent to a random location'
+          on_error: '%tag% &cUse &4/uland rtp <player>'
           raw_base_color: DARK_RED
         sound:
           on_help: ''
