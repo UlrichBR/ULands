@@ -25,6 +25,27 @@ Gui:
         - '[opengui_land] 1'
         right-action:
         - '[opengui_land] 1'
+      listadd:
+        sound-click: ''
+        itemstack: 'CHEST'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 12
+        name: '&aLand you are a member of.'
+        lore:
+        - ''
+        - ' &eClick to list all'
+        - '&eland youve been added.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_landadd] 1'
+        right-action:
+        - '[opengui_landadd] 1'
       claim:
         sound-click: ''
         itemstack: 'MAP'
@@ -32,7 +53,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 12
+        slot: 14
         name: '&aClaim Chunk'
         lore:
         - ''
@@ -52,7 +73,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 13
+        slot: 15
         name: '&aUnclaim Chunk '
         lore:
         - ''
@@ -72,7 +93,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 14
+        slot: 16
         name: '&aTerrain information '
         lore:
         - ''
