@@ -443,6 +443,58 @@ Gui:
         - '[closegui]'
         - '[player] land flag %land% piston:toggle'
         - '[opengui] global_settings_land:%land%'
+      tnt:
+        sound-click: ''
+        itemstack: 'TNT'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 23
+        name: '&aTNT EXPLODE'
+        lore:
+        - ''
+        - ' &fState: &a%tnt_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% tnt:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% tnt:toggle'
+        - '[opengui] global_settings_land:%land%'
+      mobgrief:
+        sound-click: ''
+        itemstack: 'STONE'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 24
+        name: '&aMOB GRIEF'
+        lore:
+        - ''
+        - ' &fState: &a%mobgrief_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% mobgrief:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% mobgrief:toggle'
+        - '[opengui] global_settings_land:%land%'
       back:
         sound-click: ''
         itemstack: 'ARROW'
