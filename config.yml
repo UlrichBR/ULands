@@ -34,7 +34,7 @@ Config:
         enabled: true
         particle: REDSTONE
         times: 10
-        amount: 3
+        amount: 2
         height: 4
     claim:
       enabled: true
@@ -120,6 +120,29 @@ Config:
     chunks_banned:
       enabled: true
       message: '&cBanned by &b%owner%'
+Default_flags: 
+  pvp: true
+  useenderchest: true
+  usechest: true
+  useanvil: true
+  usecraftingtable: true
+  useenchantingtable: true
+  usehopper: true
+  usebeacon: true
+  usedoor: true
+  memberbuild: true
+  memberbreak: true
+  naturalmobspawn: true
+  spawnermobspawn: true
+  eggmobspawn: true
+  useenderpearl: true
+  leafdecay: true
+  firespread: true
+  lavaflow: true
+  waterflow: true
+  piston: true
+  tnt: false
+  mobgrief: false
 Prices:
   enabled: true
   list:
