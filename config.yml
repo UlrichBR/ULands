@@ -143,6 +143,7 @@ Default_flags:
   piston: true
   tnt: false
   mobgrief: false
+  mobdamage: false
 Prices:
   enabled: true
   list:
