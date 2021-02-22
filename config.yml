@@ -6,6 +6,7 @@ Local:
 Config:
   date-format: dd/MM/yyyy HH:mm
   enabled: true
+  teleport_delay: 3
   clan_bases: false #When connected, The owner of the land is the TAG of the clan, and all members have access to the land
   delete_extensions_on_unclaim: true #When connected, when deleting a land it removes the chunks together
   only_edit_claimed: false #Can the player edit only lands he has protected?
