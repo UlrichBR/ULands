@@ -22,6 +22,7 @@ Config:
   use_material_claim_all: false
   material_claim: TORCH
   claim_distance_other_terrain: 1 #chunk away from other lands
+  moderators_claim_bases: false #If this is on, moderators can claim land.
   bypass_lands_permission: 'ulands.bypass.lands' #for admins
   Chunklimits: 
     player: 4 # permission is ulands.limit.player
