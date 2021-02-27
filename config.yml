@@ -1,0 +1,180 @@
+Plugin:
+  check-for-updates: true
+  use-metrics: true
+Local:
+  spawnkick: ''
+Config:
+  date-format: dd/MM/yyyy HH:mm
+  enabled: true
+  teleport_delay: 3
+  clan_bases: false #When connected, The owner of the land is the TAG of the clan, and all members have access to the land
+  delete_extensions_on_unclaim: true #When connected, when deleting a land it removes the chunks together
+  only_edit_claimed: false #Can the player edit only lands he has protected?
+  chunks_start_clan: 4 #With the option for clans the amount per player is this
+  chunks_max_clan: 10 #Maximum chunks that the clan can create, regardless of the number of members
+  chunk_limit_default: 4
+  enabled_worlds:
+  - lobby
+  - world
+  disabled_regions: #To add regions take the stick using /uclan wand, select the points that surround the entire desired location and use /uclan addregion <name>.
+  - lobby
+  use_material_claim: true
+  use_material_claim_all: false
+  material_claim: TORCH
+  claim_distance_other_terrain: 1 #chunk away from other lands
+  moderators_claim_bases: false #If this is on, moderators can claim land.
+  bypass_lands_permission: 'ulands.bypass.lands' #for admins
+  Chunklimits: 
+    player: 4 # permission is ulands.limit.player
+    vip1: 8 # permission is ulands.limit.vip1
+    mvp: 15 # permission is ulands.limit.mvp
+    another_name: 20 # permission is ulands.limit.another_name
+  Particle:
+    show:
+      enabled: true
+      floor:
+        enabled: true
+        particle: REDSTONE
+        times: 10
+        amount: 2
+        height: 4
+    claim:
+      enabled: true
+      floor:
+        enabled: true
+        particle: REDSTONE
+        times: 5
+        amount: 3
+        height: 4
+      outline:
+        enabled: true
+        particle: REDSTONE
+        times: 2
+        amount: 3
+        height: 4
+    unclaim:
+      enabled: true
+      floor:
+        enabled: true
+        particle: REDSTONE
+        times: 3
+        amount: 5
+        height: 4
+      outline:
+        enabled: true
+        particle: REDSTONE
+        times: 3
+        amount: 5
+        height: 4
+    unclaimall:
+      enabled: true
+      floor:
+        enabled: true
+        particle: REDSTONE
+        times: 3
+        amount: 0
+        height: 4
+      outline:
+        enabled: false
+        particle: REDSTONE
+        times: 3
+        amount: 0
+        height: 4
+  Title:
+    chunks_enter:
+      enabled: true
+      message: '&eEntered the Land'
+      sub: '&a%owner%'
+      fadein: 1
+      stay: 3
+      fadeout: 1
+    chunks_leave:
+      enabled: true
+      message: '&cLeft the Land:'
+      sub: '&a%owner%'
+      fadein: 1
+      stay: 3
+      fadeout: 1
+    chunks_banned:
+      enabled: true
+      message: '&cBanned'
+      sub: '&cby &a%owner%'
+      fadein: 1
+      stay: 3
+      fadeout: 1
+  Actionbar:
+    chunks_enter:
+      enabled: true
+      message: '&eEntered the Land &b%owner%'
+    chunks_leave:
+      enabled: true
+      message: '&cLeft the Land &b%owner%'
+    chunks_banned:
+      enabled: true
+      message: '&cBanned by &b%owner%'
+  Chat:
+    chunks_enter:
+      enabled: true
+      message: '&eEntered the Land &b%owner%'
+    chunks_leave:
+      enabled: true
+      message: '&cLeft the Land &b%owner%'
+    chunks_banned:
+      enabled: true
+      message: '&cBanned by &b%owner%'
+Default_flags: 
+  pvp: true
+  useenderchest: true
+  usechest: true
+  useanvil: true
+  usecraftingtable: true
+  useenchantingtable: true
+  usehopper: true
+  usebeacon: true
+  usedoor: true
+  memberbuild: true
+  memberbreak: true
+  naturalmobspawn: true
+  spawnermobspawn: true
+  eggmobspawn: true
+  useenderpearl: true
+  leafdecay: true
+  firespread: true
+  lavaflow: true
+  waterflow: true
+  piston: true
+  tnt: false
+  mobgrief: false
+  mobdamage: false
+Prices:
+  enabled: true
+  list:
+    rtp: 1500.0
+    info: 0.0
+    base: 0.0
+    list: 0.0
+    unclaimall: 0.0
+    claim: 1000.0
+    addmember: 0.0
+    removemember: 0.0
+    ban: 0.0
+    unban: 0.0
+    setspawn: 100.0
+    flag: 50.0
+    unclaim: 0.0
+    show: 1000.0
+Rtp:
+  enabled: true
+  toworld: FIRST #worlds in "enabled_worlds", values: RANDON, FIRST, LESSPLAYERS, MOREPLAYERS
+  use_delay: 120
+  rangemax: 2500
+  rangemin: -2500
+  block_if_empty: STONE
+Cosmetic:
+  item:
+    material: STAINED_GLASS_PANE
+    data: 7
+    amount: 1
+    name: ' '
+    flags:
+    - HIDE_ENCHANTS

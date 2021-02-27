@@ -1,0 +1,16 @@
+Json:
+  simple:
+    command_unknown_admin:
+      center: false
+      raw_text: '%tag% &cUnknown command, &b[CLICK HERE] &cor use &d/uland help &cto see the list of available commands.'
+      hover_text: '&aClick here to view Help.'
+      click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+      click_action: '/uland help'
+      raw_base_color: 'RED'
+    command_unknown_player:
+      center: false
+      raw_text: '%tag% &cUnknown command, &b[CLICK HERE] &cor use &d/land help &cto see the list of available commands.'
+      hover_text: '&aClick here to view Help.'
+      click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+      click_action: '/land help'
+      raw_base_color: 'RED'

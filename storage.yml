@@ -1,0 +1,11 @@
+Storage:
+  type: 'sqlite' #mysql/yaml/sqlite
+  mysql:
+    host: 'localhost'
+    user: 'YOU-USER'
+    pass: 'YOU-PASSWORD'
+    port: 3306
+    base: 'YOU-BASE-PRE-CREATED'
+  databases:
+    bases: 'uland-bases'
+    flags: 'uland-flags'

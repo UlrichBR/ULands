@@ -1,0 +1,951 @@
+Gui:
+  index_land:
+    inventory_name: 'Lands Menu.'
+    inventory_rows: 6
+    sound-open: ''
+    pagination: []
+    items:
+      list:
+        sound-click: ''
+        itemstack: 'CHEST'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 10
+        name: '&aList all bases.'
+        lore:
+        - ''
+        - ' &eClick to list all %clan_bases% bases'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_land] 1'
+        right-action:
+        - '[opengui_land] 1'
+      listadd:
+        sound-click: ''
+        itemstack: 'CHEST'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 12
+        name: '&aLand you are a member of.'
+        lore:
+        - ''
+        - ' &eClick to list all'
+        - '&eland youve been added.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_landadd] 1'
+        right-action:
+        - '[opengui_landadd] 1'
+      claim:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 14
+        name: '&aClaim Chunk'
+        lore:
+        - ''
+        - ' &eClick to claim a chunk'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[player] land claim'
+        right-action:
+        - '[player] land claim'
+      unclaim:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 15
+        name: '&aUnclaim Chunk '
+        lore:
+        - ''
+        - ' &eClick to unclaim a chunk'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[player] land unclaim'
+        right-action:
+        - '[player] land unclaim'
+      info:
+        sound-click: ''
+        itemstack: 'MAP'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 16
+        name: '&aTerrain information '
+        lore:
+        - ''
+        - ' &eClick to view terrain information.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[player] land info'
+        right-action:
+        - '[player] land info'
+      rtp:
+        sound-click: ''
+        itemstack: 'BOW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 28
+        name: '&aTeleport to a random location'
+        lore:
+        - ''
+        - ' &eClick to go to a random location.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /land rtp'
+        right-action:
+        - '[closegui]'
+        - '[player] /land rtp'
+      commands:
+        sound-click: ''
+        itemstack: 'PAPER'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 31
+        name: '&aCommand List and Help'
+        lore:
+        - ''
+        - ' &eClick to see the complete list'
+        - '&eof commands for Clans and Land.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] /land help'
+        right-action:
+        - '[closegui]'
+        - '[player] /land help'
+  global_settings_land:
+    inventory_name: 'Global Settings "%land%"'
+    inventory_rows: 4
+    sound-open: ''
+    pagination: []
+    items:
+      pvp:
+        sound-click: ''
+        itemstack: 'DIAMOND_SWORD'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 10
+        name: '&aPVP on Land'
+        lore:
+        - ''
+        - ' &fState: &a%pvp_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% pvp:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% pvp:toggle'
+        - '[opengui] global_settings_land:%land%'
+      member_build:
+        sound-click: ''
+        itemstack: 'IRON_SPADE'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 11
+        name: '&aMember Build'
+        lore:
+        - ''
+        - ' &fState: &a%member_build_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% member_build:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% member_build:toggle'
+        - '[opengui] global_settings_land:%land%'
+      member_break:
+        sound-click: ''
+        itemstack: 'IRON_PICKAXE'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 12
+        name: '&aMember Break'
+        lore:
+        - ''
+        - ' &fState: &a%member_break_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% member_break:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% member_break:toggle'
+        - '[opengui] global_settings_land:%land%'
+      natural_mobspawn:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        texture: ''
+        data: 2
+        amount: 1
+        slot: 13
+        name: '&aNatural MobSpawn'
+        lore:
+        - ''
+        - ' &fState: &a%natural_mobspawn_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% natural_mobspawn:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% natural_mobspawn:toggle'
+        - '[opengui] global_settings_land:%land%'
+      spawner_mobspawn:
+        sound-click: ''
+        itemstack: 'MOB_SPAWNER'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 14
+        name: '&aSpawner MobSpawn'
+        lore:
+        - ''
+        - ' &fState: &a%spawner_mobspawn_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% spawner_mobspawn:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% spawner_mobspawn:toggle'
+        - '[opengui] global_settings_land:%land%'
+      egg_mobspawn:
+        sound-click: ''
+        itemstack: 'MONSTER_EGG'
+        skullowner: ''
+        texture: ''
+        data: 90
+        amount: 1
+        slot: 15
+        name: '&aEgg MobSpawn'
+        lore:
+        - ''
+        - ' &fState: &a%egg_mobspawn_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% egg_mobspawn:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% egg_mobspawn:toggle'
+        - '[opengui] global_settings_land:%land%'
+      fire_spread:
+        sound-click: ''
+        itemstack: 'LAVA_BUCKET'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 16
+        name: '&aFire Spread'
+        lore:
+        - ''
+        - ' &fState: &a%fire_spread_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% fire_spread:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% fire_spread:toggle'
+        - '[opengui] global_settings_land:%land%'
+      leaf_decay:
+        sound-click: ''
+        itemstack: 'LEAVES'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 19
+        name: '&aLeaf Decay'
+        lore:
+        - ''
+        - ' &fState: &a%leaf_decay_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% leaf_decay:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% leaf_decay:toggle'
+        - '[opengui] global_settings_land:%land%'
+      lava_flow:
+        sound-click: ''
+        itemstack: 'LAVA_BUCKET'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 20
+        name: '&aLava Flow'
+        lore:
+        - ''
+        - ' &fState: &a%lava_flow_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% lava_flow:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% lava_flow:toggle'
+        - '[opengui] global_settings_land:%land%'
+      water_flow:
+        sound-click: ''
+        itemstack: 'WATER_BUCKET'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 21
+        name: '&aWater Flow'
+        lore:
+        - ''
+        - ' &fState: &a%water_flow_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% water_flow:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% water_flow:toggle'
+        - '[opengui] global_settings_land:%land%'
+      piston:
+        sound-click: ''
+        itemstack: 'PISTON_BASE'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 22
+        name: '&aPiston'
+        lore:
+        - ''
+        - ' &fState: &a%piston_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% piston:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% piston:toggle'
+        - '[opengui] global_settings_land:%land%'
+      tnt:
+        sound-click: ''
+        itemstack: 'TNT'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 23
+        name: '&aTNT EXPLODE'
+        lore:
+        - ''
+        - ' &fState: &a%tnt_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% tnt:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% tnt:toggle'
+        - '[opengui] global_settings_land:%land%'
+      mobgrief:
+        sound-click: ''
+        itemstack: 'STONE'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 24
+        name: '&aMOB GRIEF'
+        lore:
+        - ''
+        - ' &fState: &a%mobgrief_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% mobgrief:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% mobgrief:toggle'
+        - '[opengui] global_settings_land:%land%'
+      mobdamage:
+        sound-click: ''
+        itemstack: 'LEATHER'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 25
+        name: '&aMOB DAMAGE'
+        lore:
+        - ''
+        - ' &fState: &a%mobdamage_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% mobdamage:toggle'
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% mobdamage:toggle'
+        - '[opengui] global_settings_land:%land%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 31
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to go back'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] info_land:%land%'
+        right-action:
+        - '[opengui] info_land:%land%'
+  member_settings_land:
+    inventory_name: 'Members Settings "%land%"'
+    inventory_rows: 4
+    sound-open: ''
+    pagination: []
+    items:
+      use_enderchest:
+        sound-click: ''
+        itemstack: 'ENDER_CHEST'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 10
+        name: '&aUse Enderchest'
+        lore:
+        - ''
+        - ' &fState: &a%use_enderchest_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_enderchest:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_enderchest:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_chest:
+        sound-click: ''
+        itemstack: 'CHEST'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 11
+        name: '&aUse Chest'
+        lore:
+        - ''
+        - ' &fState: &a%use_chest_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_chest:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_chest:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_anvil:
+        sound-click: ''
+        itemstack: 'ANVIL'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 12
+        name: '&aUse Anvil'
+        lore:
+        - ''
+        - ' &fState: &a%use_anvil_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_anvil:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_anvil:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_enchanting_table:
+        sound-click: ''
+        itemstack: 'ENCHANTMENT_TABLE'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 13
+        name: '&aUse Enchanting Table'
+        lore:
+        - ''
+        - ' &fState: &a%use_enchanting_table_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_enchanting_table:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_enchantingtable:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_craftingtable:
+        sound-click: ''
+        itemstack: 'WORKBENCH'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 14
+        name: '&aUse Crafting Table'
+        lore:
+        - ''
+        - ' &fState: &a%use_craftingtable_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_craftingtable:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_craftingtable:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_hopper:
+        sound-click: ''
+        itemstack: 'HOPPER'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 15
+        name: '&aUse Hopper'
+        lore:
+        - ''
+        - ' &fState: &a%use_hopper_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_hopper:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_hopper:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_beacon:
+        sound-click: ''
+        itemstack: 'BEACON'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 16
+        name: '&aUse Beacon'
+        lore:
+        - ''
+        - ' &fState: &a%use_beacon_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_beacon:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_beacon:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_door:
+        sound-click: ''
+        itemstack: 'IRON_DOOR'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 19
+        name: '&aUse Door'
+        lore:
+        - ''
+        - ' &fState: &a%use_door_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_door:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_door:toggle'
+        - '[opengui] member_settings_land:%land%'
+      use_ender_pearl:
+        sound-click: ''
+        itemstack: 'ENDER_PEARL'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 20
+        name: '&aUse Ender Pearl'
+        lore:
+        - ''
+        - ' &fState: &a%use_ender_pearl_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_ender_pearl:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_ender_pearl:toggle'
+        - '[opengui] member_settings_land:%land%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 31
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to go back'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] info_land:%land%'
+        right-action:
+        - '[opengui] info_land:%land%'
+  info_land:
+    inventory_name: 'Land Information "%land%"'
+    inventory_rows: 6
+    sound-open: ''
+    pagination: []
+    items:
+      members:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQxZmFjNmIyYTgyODg1ODk1YzVhN2I2OTc2OWE4NWFmOTBhZmRkOGMzZDNhYjUxOTRjYzU3ODU5MTBiZDM0NSJ9fX0='
+        data: 3
+        amount: 1
+        slot: 10
+        name: '&aMembers of Land.'
+        lore:
+        - ''
+        - ' &eClick to list all members.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_members] %land%:1'
+        right-action:
+        - '[opengui_members] %land%:1'
+      online:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM4Y2YzZjhlNTRhZmMzYjNmOTFkMjBhNDlmMzI0ZGNhMTQ4NjAwN2ZlNTQ1Mzk5MDU1NTI0YzE3OTQxZjRkYyJ9fX0='
+        data: 3
+        amount: 1
+        slot: 12
+        name: '&aOnline in Land.'
+        lore:
+        - ''
+        - ' &eClick to list all online in land.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_online] %land%:1'
+        right-action:
+        - '[opengui_online] %land%:1'
+      banned:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ=='
+        data: 3
+        amount: 1
+        slot: 13
+        name: '&aBanned Members of Land.'
+        lore:
+        - ''
+        - ' &eClick to list all banned members.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_bannedmembers] %land%:1'
+        right-action:
+        - '[opengui_bannedmembers] %land%:1'
+      member_settins:
+        sound-click: ''
+        itemstack: 'REDSTONE_COMPARATOR'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 33
+        name: '&aMember Settings of Land.'
+        lore:
+        - ''
+        - ' &eClick to view.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[opengui] member_settings_land:%land%'
+      lobal_settins:
+        sound-click: ''
+        itemstack: 'REDSTONE_COMPARATOR'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 34
+        name: '&aGlobal Settings of Land.'
+        lore:
+        - ''
+        - ' &eClick to view.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] global_settings_land:%land%'
+        right-action:
+        - '[opengui] global_settings_land:%land%'
+      teleport:
+        sound-click: ''
+        itemstack: 'BOW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 28
+        name: '&aTeleport to Land.'
+        lore:
+        - ''
+        - ' &eClick to teleport'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land base %land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land base %land%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 40
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to go back'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_land] 1'
+        right-action:
+        - '[opengui_land] 1'

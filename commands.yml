@@ -1,0 +1,424 @@
+Commands:
+  aliases_to_help_commands: true
+  list:
+    uland:
+      separer1:
+        permission: ''
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: ''
+        show:
+          on_help: ' &8Lands: &6[?]'
+          on_help_json:
+            hover_text: '&aLand commands.'
+            click_type: ''
+            click_action: ''
+      help:
+        permission: ulands.admin.help
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: ajuda
+        show:
+          on_help: ' &4/uland help &7-&e Show help menu.'
+          on_help_json:
+            hover_text: '&aClick to view help of Clans.'
+            click_type: RUN_COMMAND
+            click_action: /uland help
+          on_success: '%tag% &aYou are seeing the help!'
+          on_error: '%tag% &cError to show help.'
+          on_usage: '%tag% &cErro, use &4/uland help'
+          raw_base_color: DARK_RED
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+        title:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+        actionbar:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+      reload:
+        permission: ulands.admin.reload
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: recarregar
+        show:
+          on_help: ' &4/uland reload &7-&e Reload the plugin.'
+          on_help_json:
+            hover_text: '&aClick to reload plugin configurations.'
+            click_type: SUGGEST_COMMAND
+            click_action: /uland reload
+          on_success: '%tag% &ePlugin reloaded. &8(%timeleft%)'
+          on_error: '%tag% &cError to reload.'
+          on_usage: '%tag% &cErro, use &4/uland reload'
+          raw_base_color: DARK_RED
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      setkickspawn:
+        permission: ulands.admin.setkickspawn
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: setkickspawn
+        show:
+          on_help: ' &4/uland setkickspawn &7-&e Set location for kicked players.'
+          on_help_json:
+            hover_text: '&aClick to Set the location for kicked players.'
+            click_type: SUGGEST_COMMAND
+            click_action: /uland setkickspawn
+          on_success: '%tag% &eLocation for kicked players set to your location'
+          on_error: '%tag% &cError to set kickspawn point.'
+          on_usage: '%tag% &cUse &4/uland setkickspawn'
+          raw_base_color: DARK_RED
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      rtp:
+        permission: ulands.admin.rtp
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: random
+        show:
+          on_help: ' &4/uland rtp <player> &7-&e Send the player to a random location.'
+          on_help_json:
+            hover_text: '&aClick to send the player to a random location.'
+            click_type: SUGGEST_COMMAND
+            click_action: /uland rtp <player>
+          on_success: '%tag% &ePlayer sent to a random location'
+          on_error: '%tag% &cError to use rtp to player.'
+          on_usage: '%tag% &cUse &4/uland rtp <player>'
+          raw_base_color: DARK_RED
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+    land:
+      separer1:
+        permission: ''
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: ''
+        show:
+          on_help: ' &8Clan land: &6[?]'
+          on_help_json:
+            hover_text: '&aLand commands.'
+            click_type: ''
+            click_action: ''
+      gui:
+        permission: ulands.player.gui
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'gui'
+        show:
+          on_help: ' &6/land gui &7-&e Open the gui menu.'
+          on_help_json:
+            hover_text: '&aClick to open the gui menu.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land gui
+          on_success: ''
+          on_error: '%tag% &cError to open menu.'
+          on_usage: '%tag% &cUse &6/land gui'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      rtp:
+        permission: ulands.player.rtp
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: random
+        show:
+          on_help: ' &6/land rtp &7-&e Teleports to a random terrain.'
+          on_help_json:
+            hover_text: '&aClick to teleport &c(DELAY).'
+            click_type: SUGGEST_COMMAND
+            click_action: /land rtp
+          on_success: '%tag% &aYou have been teleported to a random location!!'
+          on_error: '%tag% &cError to teleport.'
+          on_usage: '%tag% &cUse &6/land rtp'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      info:
+        permission: ulands.player.landinfo
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: info
+        show:
+          on_help: ' &6/land info &7-&e Shows terrain information.'
+          on_help_json:
+            hover_text: '&aClick view.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land info
+          on_success: '%tag% &aYou have been teleported to a random location!!'
+          on_error: '%tag% &cError to show info.'
+          on_usage: '%tag% &cUse &6/land info'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      base:
+        permission: ulands.player.base
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: base
+        show:
+          on_help: ' &6/land base <number> [tag] &7-&e Teleports to a land of clan.'
+          on_help_json:
+            hover_text: '&aClick to teleport.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land base 1
+          on_success: '%tag% &aYou were teleported to the base of the clan'
+          on_error: '%tag% &cError to teleport.'
+          on_usage: '%tag% &cUse &6/land base <number> [tag]'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      claim:
+        permission: ulands.player.claim
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: claim
+        show:
+          on_help: ' &6/land claim &7-&e Claim the terrain where you are.'
+          on_help_json:
+            hover_text: '&aClick to claim.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land claim
+          on_success: '%tag% &aThe land has been protected'
+          on_error: '%tag% &cError to claim. '
+          on_usage: '%tag% &cUse &6/land claim'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      unclaimall:
+        permission: ulands.player.unclaimall
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: unclaimall
+        show:
+          on_help: ' &6/land unclaimall &7-&e Unclain all clan lands.'
+          on_help_json:
+            hover_text: '&aClick to unclaim.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land unclaimall
+          on_success: '%tag% &aAll land has been unclaimed'
+          on_error: '%tag% &cError in declaiming the lands.'
+          on_usage: '%tag% &cUse &6/land unclaimall'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      unclaim:
+        permission: ulands.player.unclaim
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: unclaim
+        show:
+          on_help: ' &6/land unclaim &7-&e Unclaim the terrain you are on.'
+          on_help_json:
+            hover_text: '&aClick to unclaim.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land unclaim
+          on_success: '%tag% &aThe land has been unclaimed'
+          on_error: '%tag% &cError to unclaim land.'
+          on_usage: '%tag% &cUse &6/land unclaim'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      setspawn:
+        permission: ulands.player.setspawn
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: setspawn
+        show:
+          on_help: ' &6/land setspawn &7-&e Set current land spawn point.'
+          on_help_json:
+            hover_text: '&aClick to set current land spawn point.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land setspawn
+          on_success: '%tag% &aLand spawn point set at your location.'
+          on_error: '%tag% &cError to set spawn of land.'
+          on_usage: '%tag% &cUse &6/land setspawn'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      list:
+        permission: ulands.player.list
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: lands
+        show:
+          on_help: ' &6/land list &7-&e Show your land list.'
+          on_help_json:
+            hover_text: '&aClick to view.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land list
+          on_success: '%tag% &aYou are viewing the list of land'
+          on_error: '%tag% &cError to show list.'
+          on_usage: '%tag% &cUse &6/land list'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      flag:
+        permission: ulands.player.flag
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: flag
+        show:
+          on_help: ' &6/land flag <chunk> <flag>:<true|false> &7-&e Edit land &6flags.'
+          on_help_json:
+            hover_text: '&aClick to view.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land flag
+          on_success: '%tag% &aFlag successfully changed to &b%flag%'
+          on_error: '%tag% &cError to change flag.'
+          on_usage: '%tag% &cError, use &b/land flag <chunk> <flag>:<true|false>.'
+          raw_base_color: GOLD
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      addmember:
+        permission: ulands.player.addmember
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: addmember
+        show:
+          on_help: ' &6/land addmember <player> &7-&e Add members to the land.'
+          on_help_json:
+            hover_text: '&aClick to add members to the land.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land addmember <player>
+          on_success: '%tag% &aMember &b%player% &asuccessfully added to the land.'
+          on_error: '%tag% &cError to add &a%player%'
+          on_usage: '%tag% &cUse &6/land addmember <player>'
+          raw_base_color: GOLD
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      removemember:
+        permission: ulands.player.removemember
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: removemember
+        show:
+          on_help: ' &6/land removemember <player> &7-&e Remove members to the land.'
+          on_help_json:
+            hover_text: '&aClick to remove members to the land.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land removemember <player>
+          on_success: '%tag% &aMember &b%player% &asuccessfully removed to the land.'
+          on_error: '%tag% &cError to remove &a%player%'
+          on_usage: '%tag% &cUse &6/land removemember <player>'
+          raw_base_color: GOLD
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      ban:
+        permission: ulands.player.ban
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: ban
+        show:
+          on_help: ' &6/land ban <player> &7-&e Ban players from the field.'
+          on_help_json:
+            hover_text: '&aClick to ban players from the field.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land ban <player>
+          on_success: '%tag% &aMember &b%player% &asuccessfully banned to the land.'
+          on_error: '%tag% &cError to ban &a%player%'
+          on_usage: '%tag% &cUse &6/land ban <player>'
+          raw_base_color: GOLD
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      unban:
+        permission: ulands.player.unban
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: unban
+        show:
+          on_help: ' &6/land unban <player> &7-&e UnBan players from the field.'
+          on_help_json:
+            hover_text: '&aClick to unban players from the field.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land unban <player>
+          on_success: '%tag% &aMember &b%player% &asuccessfully Unbanned to the land.'
+          on_error: '%tag% &cError to unban &a%player%'
+          on_usage: '%tag% &cUse &6/land unban <player>'
+          raw_base_color: GOLD
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      show:
+        permission: ulands.player.show
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: show
+        cooldown: 10
+        show:
+          on_help: ' &6/land show &7-&e See the boundaries of the land.'
+          on_help_json:
+            hover_text: '&aClick to view land boundaries.'
+            click_type: SUGGEST_COMMAND
+            click_action: /land show
+          on_success: '%tag% &aYou are seeing the limits of the land.'
+          on_error: '%tag% &cError to see the boundaries of the land.'
+          on_usage: '%tag% &cUse &6/land show'
+          raw_base_color: GOLD
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
