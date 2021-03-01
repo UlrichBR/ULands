@@ -24,7 +24,31 @@ Config:
   claim_distance_other_terrain: 1 #chunk away from other lands
   moderators_claim_bases: false #If this is on, moderators can claim land.
   bypass_lands_permission: 'ulands.bypass.lands' #for admins
-  Chunklimits: 
+  extra_storage_list: # List of blocked items for members with the USE_EXTRA_STORAGE flag
+  - 'DROPPER'
+  blocked_global_interaction: # non-member items are blocked from interacting.
+  - 'WORKBENCH'
+  - 'BEACON'
+  - 'HOPPER'
+  - 'ANVIL'
+  - 'CHEST'
+  - 'ENDER_CHEST'
+  - 'TRAPPED_CHEST'
+  - 'CRAFTING_TABLE'
+  - 'ENCHANTMENT_TABLE'
+  - 'ENCHANTING_TABLE'
+  - 'FURNACE'
+  - 'DISPENSER'
+  - 'SHULKER_BOX'
+  - 'JUKEBOX'
+  - 'ITEM_FRAME'
+  - 'DOOR'
+  - 'BARREL'
+  - 'LOOM'
+  - 'LECTERN'
+  - 'TNT'
+  - 'DROPPER'
+  Chunklimits:
     player: 4 # permission is ulands.limit.player
     vip1: 8 # permission is ulands.limit.vip1
     mvp: 15 # permission is ulands.limit.mvp
@@ -146,6 +170,7 @@ Default_flags:
   tnt: false
   mobgrief: false
   mobdamage: false
+  useextrastorage: true
 Prices:
   enabled: true
   list:
