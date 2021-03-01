@@ -781,6 +781,32 @@ Gui:
         - '[closegui]'
         - '[player] land flag %land% use_ender_pearl:toggle'
         - '[opengui] member_settings_land:%land%'
+      use_extra_storage:
+        sound-click: ''
+        itemstack: 'TRAPPED_CHEST'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 20
+        name: '&aUse Extra Storage'
+        lore:
+        - ''
+        - ' &fState: &a%use_extra_storage_state%'
+        - ''
+        - ' &eClick to change.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_extra_storage:toggle'
+        - '[opengui] member_settings_land:%land%'
+        right-action:
+        - '[closegui]'
+        - '[player] land flag %land% use_extra_storage:toggle'
+        - '[opengui] member_settings_land:%land%'
       back:
         sound-click: ''
         itemstack: 'ARROW'
