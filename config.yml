@@ -26,6 +26,9 @@ Config:
   bypass_lands_permission: 'ulands.bypass.lands' #for admins
   extra_storage_list: # List of blocked items for members with the USE_EXTRA_STORAGE flag
   - 'DROPPER'
+  blocked_global_entity_interaction:
+  - 'ITEM_FRAME'
+  - 'HORSE'
   blocked_global_interaction: # non-member items are blocked from interacting.
   - 'WORKBENCH'
   - 'BEACON'
