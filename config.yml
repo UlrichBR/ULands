@@ -26,31 +26,10 @@ Config:
   bypass_lands_permission: 'ulands.bypass.lands' #for admins
   extra_storage_list: # List of blocked items for members with the USE_EXTRA_STORAGE flag
   - 'DROPPER'
-  blocked_global_entity_interaction:
-  - 'ITEM_FRAME'
-  - 'HORSE'
-  blocked_global_interaction: # non-member items are blocked from interacting.
-  - 'WORKBENCH'
-  - 'BEACON'
-  - 'HOPPER'
-  - 'ANVIL'
-  - 'CHEST'
-  - 'ENDER_CHEST'
-  - 'TRAPPED_CHEST'
-  - 'CRAFTING_TABLE'
-  - 'ENCHANTMENT_TABLE'
-  - 'ENCHANTING_TABLE'
   - 'FURNACE'
-  - 'DISPENSER'
-  - 'SHULKER_BOX'
-  - 'JUKEBOX'
-  - 'ITEM_FRAME'
-  - 'DOOR'
-  - 'BARREL'
-  - 'LOOM'
-  - 'LECTERN'
-  - 'TNT'
-  - 'DROPPER'
+  allowed_block_interaction: # List of items that non-members can interact with on the grounds
+  - 'WALL_SIGN'
+  - 'SIGN_POST'
   Chunklimits:
     player: 4 # permission is ulands.limit.player
     vip1: 8 # permission is ulands.limit.vip1
