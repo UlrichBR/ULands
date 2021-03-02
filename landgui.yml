@@ -503,7 +503,7 @@ Gui:
         data: 0
         amount: 1
         slot: 25
-        name: '&aMOB DAMAGE'
+        name: '&aMOB DAMAGE/INTERACT'
         lore:
         - ''
         - ' &fState: &a%mobdamage_state%'
@@ -788,7 +788,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 20
+        slot: 21
         name: '&aUse Extra Storage'
         lore:
         - ''
