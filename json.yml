@@ -14,3 +14,25 @@ Json:
       click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
       click_action: '/land help'
       raw_base_color: 'RED'
+    place_outside_land:
+      center: false
+      raw_text: '' # use '' to disable text message. 
+      hover_text: ''
+      click_type: '' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+      click_action: ''
+      raw_base_color: 'RED'
+      extra:
+        sound: '' # use '' to disable sound
+        title: '' # use '' to disable title, use %nl% to separate Title and Subtitle
+        actionbar: '&cYou are placing blocks outside a land!' # use '' to disable actionbar message.
+    break_outside_land:
+      center: false
+      raw_text: '' # use '' to disable text message. 
+      hover_text: ''
+      click_type: '' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+      click_action: ''
+      raw_base_color: 'RED'
+      extra:
+        sound: '' # use '' to disable sound
+        title: '' # use '' to disable title, use %nl% to separate Title and Subtitle
+        actionbar: '&cYou are breaking blocks outside a land!' # use '' to disable actionbar message.
