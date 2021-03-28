@@ -1,3 +1,16 @@
+# PLACEHOLDERS WITH PAPI
+#PLAYER:
+# %ulands_hasbases% - return  true or false
+# %ulands_claimed_bases_size% - return int or 0
+# %ulands_claimed_chunks_size% - return int or 0
+# %ulands_claim_limit% - return int or 0
+#CURRENT:
+# %ulands_is_owner_current_chunk% - return true or false
+# %ulands_is_banned_current_chunk% - return true or false
+# %ulands_get_owner_current_chunk% - return string or ""
+# %ulands_get_members_count_current_chunk% - return int or 0
+# %ulands_get_banned_count_current_chunk% - return int or 0
+# %ulands_get_size_count_current_chunk% - return int or 0
 Plugin:
   check-for-updates: true
   use-metrics: true
@@ -24,6 +37,7 @@ Config:
   claim_distance_other_terrain: 1 #chunk away from other lands
   moderators_claim_bases: false #If this is on, moderators can claim land.
   bypass_lands_permission: 'ulands.bypass.lands' #for admins
+  visit_lands_permission: 'ulands.visit.lands' #Permission to visit land. Use empty '' to disable permission.
   extra_storage_list: # List of blocked items for members with the USE_EXTRA_STORAGE flag
   - 'DROPPER'
   - 'FURNACE'
