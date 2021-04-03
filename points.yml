@@ -1,0 +1,19 @@
+points: # Always use lowercase letters, values ​​must be integers
+  diamond_block:
+    data: 0
+    value: 10
+  diamond_ore:
+    data: 0
+    value: 8
+  gold_block:
+    data: 0
+    value: 8
+  gold_ore:
+    data: 0
+    value: 6
+  iron_block:
+    data: 0
+    value: 5
+  iron_ore:
+    data: 0
+    value: 3
