@@ -124,10 +124,30 @@ Commands:
           on_help_json:
             hover_text: '&aClick to open the gui menu.'
             click_type: SUGGEST_COMMAND
-            click_action: /land gui
+            click_action: '/land gui'
           on_success: ''
           on_error: '%tag% &cError to open menu.'
           on_usage: '%tag% &cUse &6/land gui'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
+      top:
+        permission: ulands.player.top
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'top'
+        show:
+          on_help: ' &6/land top &7-&e Shows the Top Lands.'
+          on_help_json:
+            hover_text: '&aClick to open the Top Lands.'
+            click_type: SUGGEST_COMMAND
+            click_action: '/land top'
+          on_success: ''
+          on_error: '%tag% &cError to open menu.'
+          on_usage: '%tag% &cUse &6/land top'
         sound:
           on_help: ''
           on_success: ''
