@@ -70,3 +70,5 @@ player member removed: '%tag% &cYou have been removed as a member of the &b%owne
 player member added: '%tag% &eYou have been added as a member of the &b%owner% &eterrain.'
 player member banned: '%tag% &cYou have been banned of the &b%owner% &cterrain.'
 player member unbanned: '%tag% &eYou have been unbanned of the &b%owner% &eterrain.'
+point calculating blocks: '%tag% &7Wait, calculating blocks...'
+point end block calculation: '%tag% &7End of block calculation. Inherited points: &b%points%'
