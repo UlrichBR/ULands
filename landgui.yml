@@ -1,7 +1,22 @@
+# INTERNAL PLACEHOLDERS
+# %chunk%
+# %ulands_id%
+# %ulands_owner%
+# %ulands_members%
+# %ulands_online_members%
+# %ulands_banned_members%
+# %ulands_size%
+# %ulands_points%
+# %ulands_points_formated%
+# %ulands_points_decim%
+# %ulands_claim_date%
+# %ulands_world%
+# %ulands_chunk%
+# %ulands_spawn%
 Gui:
   index_land:
-    inventory_name: 'Lands Menu.'
-    inventory_rows: 6
+    inventory_name: '&bLands Menu.'
+    inventory_rows: 5
     sound-open: ''
     pagination: []
     items:
@@ -151,9 +166,29 @@ Gui:
         right-action:
         - '[closegui]'
         - '[player] /land help'
+      top:
+        sound-click: ''
+        itemstack: 'SKULL_ITEM'
+        skullowner: ''
+        texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE2MTIzMTZmOGQ2OWNhMTgxODQ0NjJiZDY0ZTFkZGI4ZGY5OWYwZGY2ZjljOWMwMmI0YzFhNDFjMTMyYWQ5NyJ9fX0='
+        data: 3
+        amount: 1
+        slot: 34
+        name: '&aTop Lands.'
+        lore:
+        - ''
+        - ' &eClick to see the Top Lands'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_top] 1'
+        right-action:
+        - '[opengui_top] 1'
   global_settings_land:
-    inventory_name: 'Global Settings "%land%"'
-    inventory_rows: 4
+    inventory_name: '&bGlobal Settings &7| &8Id: %land%'
+    inventory_rows: 5
     sound-open: ''
     pagination: []
     items:
@@ -528,7 +563,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 31
+        slot: 40
         name: '&cCome back'
         lore:
         - ''
@@ -542,8 +577,8 @@ Gui:
         right-action:
         - '[opengui] info_land:%land%'
   member_settings_land:
-    inventory_name: 'Members Settings "%land%"'
-    inventory_rows: 4
+    inventory_name: '&bMembers Settings &7| &8Id: %land%'
+    inventory_rows: 5
     sound-open: ''
     pagination: []
     items:
@@ -814,7 +849,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 31
+        slot: 40
         name: '&cCome back'
         lore:
         - ''
@@ -828,8 +863,8 @@ Gui:
         right-action:
         - '[opengui] info_land:%land%'
   info_land:
-    inventory_name: 'Land Information "%land%"'
-    inventory_rows: 6
+    inventory_name: '&bLand Information &7| &8Id: %land%'
+    inventory_rows: 5
     sound-open: ''
     pagination: []
     items:
@@ -844,6 +879,8 @@ Gui:
         name: '&aMembers of Land.'
         lore:
         - ''
+        - ' &7Members: &b%ulands_members%'
+        - ' '
         - ' &eClick to list all members.'
         enchants:
         - ''
@@ -864,6 +901,8 @@ Gui:
         name: '&aOnline in Land.'
         lore:
         - ''
+        - ' &7Online Members: &b%ulands_online_members%'
+        - ' '
         - ' &eClick to list all online in land.'
         enchants:
         - ''
@@ -884,6 +923,8 @@ Gui:
         name: '&aBanned Members of Land.'
         lore:
         - ''
+        - ' &7Banned Members: &b%ulands_banned_members%'
+        - ' '
         - ' &eClick to list all banned members.'
         enchants:
         - ''
@@ -893,6 +934,29 @@ Gui:
         - '[opengui_bannedmembers] %land%:1'
         right-action:
         - '[opengui_bannedmembers] %land%:1'
+      landinfo:
+        sound-click: ''
+        itemstack: 'PAPER'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 16
+        name: '&aLand Info.'
+        lore:
+        - ''
+        - ' &eLand information:'
+        - ''
+        - ' &7Owner: &b%ulands_owner%'
+        - ' &7Members: &b%ulands_members%'
+        - ' &7Size: &b%ulands_size%'
+        - ' &7Points: &b%ulands_points_decim%'
+        - ' &7Spawn: &b%ulands_spawn%'
+        - ' &7Claim Date: &b%ulands_claim_date%'
+        enchants:
+        - ''
+        flags:
+        - ''
       member_settins:
         sound-click: ''
         itemstack: 'REDSTONE_COMPARATOR'
