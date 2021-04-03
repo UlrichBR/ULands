@@ -1,9 +1,111 @@
+# INTERNAL PLACEHOLDERS
+# %chunk%
+# %ulands_id%
+# %ulands_owner%
+# %ulands_members%
+# %ulands_online_members%
+# %ulands_banned_members%
+# %ulands_size%
+# %ulands_points%
+# %ulands_points_formated%
+# %ulands_points_decim%
+# %ulands_claim_date%
+# %ulands_world%
+# %ulands_chunk%
+# %ulands_spawn%
 Gui:
-  land:
-    inventory_name: 'Land List [Pg: %page%]'
-    inventory_rows: 5
+  top:
+    inventory_name: '&bTop Lands &7| &8Page: %page%/%pages%'
+    inventory_rows: 6
     sound-open: ''
-    max_items: 36
+    max_items: 45
+    items:
+      current:
+        sound-click: '' #example BLOCK_ANVIL_LAND:1
+        itemstack: 'GRASS'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 0
+        name: '&aTOP %number%'
+        lore:
+        - ''
+        - ' &a&l%ulands_points_decim% Points '
+        - ''
+        - ' &7Owner: &b%ulands_owner%'
+        - ' &7Members: &b%ulands_members%'
+        - ' &7Size: &b%ulands_size%'
+        - ' &7Claim Date: &b%ulands_claim_date%'
+        enchants:
+        - ''
+        flags:
+        - ''
+      prev:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 38
+        name: '&cPrevious page'
+        lore:
+        - ''
+        - ' &eClick to go back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_top] %prev%'
+        right-action:
+        - '[opengui_top] %prev%'
+      next:
+        sound-click: ''
+        itemstack: 'INK_SACK'
+        skullowner: ''
+        texture: ''
+        data: 8
+        amount: 1
+        slot: 42
+        name: '&cNext page'
+        lore:
+        - ''
+        - ' &eClick to proceed.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui_top] %next%'
+        right-action:
+        - '[opengui_top] %next%'
+      back:
+        sound-click: ''
+        itemstack: 'ARROW'
+        skullowner: ''
+        texture: ''
+        data: 0
+        amount: 1
+        slot: 49
+        name: '&cCome back'
+        lore:
+        - ''
+        - ' &eClick to go back.'
+        enchants:
+        - ''
+        flags:
+        - ''
+        left-action:
+        - '[opengui] index_land'
+        right-action:
+        - '[opengui] index_land'
+  land:
+    inventory_name: '&bLand List &7| &8Page: %page%/%pages%'
+    inventory_rows: 6
+    sound-open: ''
+    max_items: 45
     items:
       current:
         sound-click: '' #example BLOCK_ANVIL_LAND:1
@@ -16,9 +118,12 @@ Gui:
         name: '&aGround n. %number%'
         lore:
         - ''
-        - ' &eClick to edit preferences.'
-        - ' '
-        - ' &ePosition&b: %chunk%'
+        - ' &eClick to open.'
+        - ''
+        - ' &7Members: &b%ulands_members%'
+        - ' &7Size: &b%ulands_size%'
+        - ' &7Points: &b%ulands_points_decim%'
+        - ' &7Claim Date: &b%ulands_claim_date%'
         enchants:
         - ''
         flags:
@@ -76,7 +181,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 40
+        slot: 49
         name: '&cCome back'
         lore:
         - ''
@@ -90,10 +195,10 @@ Gui:
         right-action:
         - '[opengui] index_land'
   members:
-    inventory_name: 'List of Members "%land%" [Pg: %page%]'
-    inventory_rows: 5
+    inventory_name: '&bMembers (%ulands_members%) &7| &8Page: %page%/%pages%'
+    inventory_rows: 6
     sound-open: ''
-    max_items: 27
+    max_items: 45
     items:
       current:
         sound-click: ''
@@ -167,7 +272,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 40
+        slot: 49
         name: '&cCome back'
         lore:
         - ''
@@ -181,10 +286,10 @@ Gui:
         right-action:
         - '[opengui] info_land:%land%'
   banned_members:
-    inventory_name: 'Banned Members "%land%" [Pg: %page%]'
-    inventory_rows: 5
+    inventory_name: '&4Banned (%ulands_banned_members%) &7| &8Page: %page%/%pages%'
+    inventory_rows: 6
     sound-open: ''
-    max_items: 27
+    max_items: 45
     items:
       current:
         sound-click: ''
@@ -253,7 +358,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 40
+        slot: 49
         name: '&cCome back'
         lore:
         - ''
@@ -267,10 +372,10 @@ Gui:
         right-action:
         - '[opengui] info_land:%land%'
   online_members:
-    inventory_name: 'Online in the land "%land%" [Pg: %page%] '
-    inventory_rows: 5
+    inventory_name: '&aOnline (%ulands_online_members%) &7| &8Page: %page%/%pages%'
+    inventory_rows: 6
     sound-open: ''
-    max_items: 27
+    max_items: 45
     items:
       current:
         sound-click: ''
@@ -344,7 +449,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 40
+        slot: 49
         name: '&cCome back'
         lore:
         - ''
@@ -358,10 +463,10 @@ Gui:
         right-action:
         - '[opengui] info_land:%land%'
   landadd:
-    inventory_name: 'You are a member [Pg: %page%]'
-    inventory_rows: 5
+    inventory_name: '&8You are a member &7| &8Page: %page%/%pages%'
+    inventory_rows: 6
     sound-open: ''
-    max_items: 36
+    max_items: 45
     items:
       current:
         sound-click: '' #example BLOCK_ANVIL_LAND:1
@@ -435,7 +540,7 @@ Gui:
         texture: ''
         data: 0
         amount: 1
-        slot: 40
+        slot: 49
         name: '&cCome back'
         lore:
         - ''
