@@ -1,0 +1,38 @@
+#
+# This file should not be changed if you do not know what each listed event is for.
+# Listerns are interactions that the plugin does with minecraft, performing checks on each argument.
+# When you turn off something in this list, something will no longer be checked, such as "throwing arrows at mobs" or "breaking ground".
+# Use with caution and at each exchange (true / false) reload the plugin settings using /ulands reload
+#
+Listerns:
+  EntityDamageByEntityEvent: true
+  EntityInteractEvent: true
+  PlayerInteractAtEntityEvent: true
+  VehicleEntityCollisionEvent: true
+  VehicleDamageEvent: true
+  HangingBreakByEntityEvent: true
+  PlayerInteractEntityEvent: true
+  PlayerInteractEvent: true
+  LeavesDecayEvent: true
+  PlayerTeleportEvent: true
+  ProjectileLaunchEvent: true
+  InventoryClickEvent: true
+  PlayerTeleportEvent: true
+  PlayerMoveEvent: true
+  PlayerBucketEmptyEvent: true
+  BlockFromToEvent: true
+  EntityChangeBlockEvent: true
+  EntityExplodeEvent: true
+  CreatureSpawnEvent: true
+  BlockPistonExtendEvent: true
+  BlockPistonRetractEvent: true
+  PotionSplashEvent: true
+  EntityDamageEvent: true
+  BlockBurnEvent: true
+  EntityExplodeEvent: true
+  BlockBreakEvent: true
+  BlockPlaceEvent: true
+  ClanDeleteEvent: true # UCLANS EVENT
+  ClanModtagEvent: true # UCLANS EVENT
+  PlayerKickEvent: true # UCLANS EVENT
+  PlayerQuitEvent: true # UCLANS EVENT
