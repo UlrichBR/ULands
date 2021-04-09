@@ -11,6 +11,7 @@
 # %ulands_get_members_count_current_chunk% - return int or 0
 # %ulands_get_banned_count_current_chunk% - return int or 0
 # %ulands_get_size_count_current_chunk% - return int or 0
+# %ulands_get_points_current_chunk% - return int or 0
 Plugin:
   check-for-updates: true
   use-metrics: true
@@ -18,7 +19,11 @@ Local:
   spawnkick: ''
 Points:
   enabled: true
-  calculate_existing_blocks_onclain: true # This option consumes a little more memory as you need to check all the blocks of the climaxed chunk
+  calculate_existing_blocks_onclain: true
+Dynmap:
+  enabled: true
+  format: 'Owner: %owner% - Size: %size% - Id: %id%'
+  use_on_update: true
 Config:
   date-format: dd/MM/yyyy HH:mm
   enabled: true
