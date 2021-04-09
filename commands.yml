@@ -155,6 +155,27 @@ Commands:
           extra:
             volume: 10
             pitch: 1
+      update:
+        cooldown: 1 # IN SECONDS
+        permission: ulands.player.update
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'update'
+        show:
+          on_help: ' &6/land update &7-&e Update Land map/stats.'
+          on_help_json:
+            hover_text: '&aClick to update.'
+            click_type: SUGGEST_COMMAND
+            click_action: '/land update'
+          on_success: '%tag% &aUpdate completed successfully!'
+          on_error: '%tag% &cError to update.'
+          on_usage: '%tag% &cUse &6/land update'
+        sound:
+          on_help: ''
+          on_success: ''
+          on_error: ''
+          extra:
+            volume: 10
+            pitch: 1
       rtp:
         permission: ulands.player.rtp
         no_permission_message: '%tag% &cYou dont have permission for this.'
